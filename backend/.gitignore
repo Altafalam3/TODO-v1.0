@@ -1,0 +1,33 @@
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database files
+*.db
+*.sqlite3
+db.sqlite3
+
+# Log files
+*.log
+
+# Environment and virtual environment files
+.env
+.venv/
+venv/
+ENV/
+
+# Generated media files
+media/
+
+
+# Other generated files
+coverage.xml
+*.coverage
+.coverage
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
