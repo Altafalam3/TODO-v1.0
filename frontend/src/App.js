@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Modal from "./components/Modal";
+import Modal from "./components/CustomModal";
 import axios from 'axios';
 
 const App = () => {
@@ -57,6 +57,7 @@ const App = () => {
     return newItems.map(item => (
       <li
         key={item.id}
+        className="list-group-item d-flex justify-content-between align-items-center"
       >
         <span
           className={`todo-title mr-2 ${viewCompleted ? "completed-todo" : ""}`}
@@ -67,11 +68,13 @@ const App = () => {
         <span>
           <button
             onClick={() => editItem(item)}
+            className="btn btn-secondary mr-2"
           >
             Edit
           </button>
           <button
             onClick={() => handleDelete(item)}
+            className="btn btn-danger"
           >
             Delete
           </button>
@@ -115,31 +118,36 @@ const App = () => {
   };
 
   return (
-    <main className="content">
-      <h1 >Task Manager</h1>
-      <div className="row ">
-        <div >
-          <div >
-            <div >
-              <button onClick={createItem} >
-                Add task
-              </button>
+    <>
+      <main className="content">
+        <h1 className="text-black text-uppercase text-center my-4">Task Manager</h1>
+        <div className="row ">
+          <div className="col-md-6 col-sm-10 mx-auto p-0">
+            <div className="card p-3">
+              <div className="">
+                <button onClick={createItem} className="btn btn-primary">
+                  Add task
+                </button>
+              </div>
+              {renderTabList()}
+              <ul className="list-group list-group-flush">
+                {renderItems()}
+              </ul>
             </div>
-            {renderTabList()}
-            <ul >
-              {renderItems()}
-            </ul>
           </div>
         </div>
-      </div>
-      {modal ? (
-        <Modal
-          activeItem={activeItem}
-          toggle={toggle}
-          onSave={handleSubmit}
-        />
-      ) : null}
-    </main>
+        {modal ? (
+          <Modal
+            activeItem={activeItem}
+            toggle={toggle}
+            onSave={handleSubmit}
+          />
+        ) : null}
+      </main>
+      <footer className="text-black text-uppercase text-center my-4 ">
+        Copyright 2023 @copy;  All rights reserved
+      </footer>
+    </>
   );
 }
 
