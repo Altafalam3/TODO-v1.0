@@ -34,18 +34,18 @@ const App = () => {
   const renderTabList = () => {
     return (
       <div className="my-5 tab-list">
-        <span
+        <button
           onClick={() => displayCompleted(true)}
-          className={viewCompleted ? "active" : ""}
+          className={`${viewCompleted ? "btn btn-secondary" : "btn"} m-1 square border border-info`}
         >
-          completed
-        </span>
-        <span
+          Completed
+        </button>
+        <button
           onClick={() => displayCompleted(false)}
-          className={!viewCompleted ? "active" : ""}
+          className={`${!viewCompleted ? "btn btn-secondary" : "btn"} m-1 square border border-info`}
         >
-          Incompleted
-        </span>
+          Incomplete
+        </button>
       </div>
     );
   };
@@ -68,13 +68,13 @@ const App = () => {
         <span>
           <button
             onClick={() => editItem(item)}
-            className="btn btn-secondary mr-2"
+            className="btn btn-secondary m-1 "
           >
             Edit
           </button>
           <button
             onClick={() => handleDelete(item)}
-            className="btn btn-danger"
+            className="btn btn-danger m-1"
           >
             Delete
           </button>
@@ -145,7 +145,7 @@ const App = () => {
         ) : null}
       </main>
       <footer className="text-black text-uppercase text-center my-4 ">
-        Copyright 2023 @copy;  All rights reserved
+        Copyright 2023  All rights reserved
       </footer>
     </>
   );
