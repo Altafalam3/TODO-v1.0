@@ -1,7 +1,6 @@
 #backend
 # Compiled Python files
-backend/backend/__pycache__
-backend/todo/__pycache__
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
