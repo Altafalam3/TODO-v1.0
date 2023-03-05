@@ -1,4 +1,4 @@
-# TODO-LIST
+# TODO v1.0
 
 This project serves as a reminder of what needs to be done, and can help you to keep track of progress and priorities. By listing out tasks in a todo list, it can also help break down a larger project into smaller, more manageable pieces.
 
@@ -36,7 +36,7 @@ npm run build
 ```
 
 
-## Backend( Django )
+## Backend ( Django )
 
 To run the program in local server use the following command in backend folder
 
