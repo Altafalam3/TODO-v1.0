@@ -33,18 +33,18 @@ const App = () => {
 
   const renderTabList = () => {
     return (
-      <div className="my-5 tab-list">
+      <div className="mt-4 mb-3 tab-list">
         <button
           onClick={() => displayCompleted(true)}
           className={`${viewCompleted ? "btn btn-secondary" : "btn"} m-1 square border border-info`}
         >
-          Completed
+          Completed Tasks
         </button>
         <button
           onClick={() => displayCompleted(false)}
           className={`${!viewCompleted ? "btn btn-secondary" : "btn"} m-1 square border border-info`}
         >
-          Incomplete
+          Incomplete Tasks
         </button>
       </div>
     );
@@ -61,9 +61,13 @@ const App = () => {
       >
         <span
           className={`todo-title mr-2 ${viewCompleted ? "completed-todo" : ""}`}
-          title={item.description}
         >
+          <strong className="text-uppercase text-info">
           {item.title}
+          </strong>
+          <p className="text-black-50">
+          - {item.description}
+          </p>
         </span>
         <span>
           <button
@@ -120,12 +124,12 @@ const App = () => {
   return (
     <>
       <main className="content">
-        <h1 className="text-black text-uppercase text-center my-4">Task Manager</h1>
+        <h1 className="text-black text-center my-4 bg-light">TODO v8</h1>
         <div className="row ">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
-            <div className="card p-3">
+            <div className="card p-2">
               <div className="">
-                <button onClick={createItem} className="btn btn-primary">
+                <button onClick={createItem} className="btn btn-lg btn-success">
                   Add task
                 </button>
               </div>
