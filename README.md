@@ -7,13 +7,13 @@ This project serves as a reminder of what needs to be done, and can help you to 
 open terminal and type
 
 ```
-git clone https://github.com/Altafalam3/TODO-LIST.git
+git clone https://github.com/Altafalam3/TODO-v1.0.git
 ```
 
 or you can download using the url below
 
 ```
-https://github.com/Altafalam3/TODO-LIST.git
+https://github.com/Altafalam3/TODO-v1.0.git
 ```
 ## Frontend ( React )
 
